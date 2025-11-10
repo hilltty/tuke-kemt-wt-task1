@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homelab Setup - SysAdmin Portfolio</title>
+    <link rel="stylesheet" href="../css/global.css?v=2">
+    <link rel="stylesheet" href="../css/layout.css?v=2">
+    <link rel="stylesheet" href="../css/monitoring-theme.css?v=2">
+    <link rel="stylesheet" href="../css/homelab.css?v=2">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="status-indicator"></span>
+                <h1>SysAdmin Portfolio</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Technológie</a></li>
+                    <li><a href="team.html">Tím</a></li>
+                    <li><a href="homelab.html" class="active">Homelab</a></li>
+                    <li><a href="changes.html">Zmeny</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <h2>Domáci Server Setup</h2>
+            <p class="subtitle">Prehľad hardvéru a služieb v domácom prostredí</p>
+        </section>
+
+        <section class="homelab-overview">
+            <div class="hardware-section">
+                <h3>Hardvér</h3>
+                <div class="hardware-grid">
+                    <div class="hardware-card dashboard-card">
+                        <div class="hardware-image">
+                            <img src="../assets/images/homelab/mikrotik.jpg" alt="MikroTik hAP ac2">
+                        </div>
+                        <div class="hardware-info">
+                            <h4>MikroTik hAP ac2</h4>
+                            <p class="hardware-role">Router</p>
+                            <ul class="hardware-specs">
+                                <li>Dual-band WiFi AC</li>
+                                <li>5x Gigabit porty</li>
+                                <li>RouterOS</li>
+                                <li>VPN server</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="hardware-card dashboard-card">
+                        <div class="hardware-image">
+                            <img src="../assets/images/homelab/huawei.jpg" alt="Huawei AX3 Pro">
+                        </div>
+                        <div class="hardware-info">
+                            <h4>Huawei AX3 Pro</h4>
+                            <p class="hardware-role">WiFi 6 Access Point</p>
+                            <ul class="hardware-specs">
+                                <li>WiFi 6 (802.11ax)</li>
+                                <li>Dual-band</li>
+                                <li>OFDMA & MU-MIMO</li>
+                                <li>Rozšírenie pokrytia</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="hardware-card dashboard-card">
+                        <div class="hardware-image">
+                            <img src="../assets/images/homelab/orangepi.jpeg" alt="Orange Pi 5">
+                        </div>
+                        <div class="hardware-info">
+                            <h4>Orange Pi 5</h4>
+                            <p class="hardware-role">Server / SBC</p>
+                            <ul class="hardware-specs">
+                                <li>Rockchip RK3588S</li>
+                                <li>8GB RAM</li>
+                                <li>NVMe SSD</li>
+                                <li>DietPi OS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-section">
+                <h3>Služby a Aplikácie</h3>
+                <div class="services-grid">
+                    <div class="service-card dashboard-card">
+                        <div class="service-header">
+                            <span class="status-indicator status-active"></span>
+                            <h4>Cloudflared</h4>
+                        </div>
+                        <p>Cloudflare Tunnel pre bezpečný prístup k domácim službám bez otvorenia portov.</p>
+                        <div class="service-tags">
+                            <span class="tag">Tunnel</span>
+                            <span class="tag">Security</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card dashboard-card">
+                        <div class="service-header">
+                            <span class="status-indicator status-active"></span>
+                            <h4>ZeroTier</h4>
+                        </div>
+                        <p>Software-defined networking pre vytvorenie virtuálnej privátnej siete.</p>
+                        <div class="service-tags">
+                            <span class="tag">VPN</span>
+                            <span class="tag">SDN</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card dashboard-card">
+                        <div class="service-header">
+                            <span class="status-indicator status-active"></span>
+                            <h4>WireGuard</h4>
+                        </div>
+                        <p>Moderný VPN protokol pre rýchle a bezpečné pripojenie k domácej sieti.</p>
+                        <div class="service-tags">
+                            <span class="tag">VPN</span>
+                            <span class="tag">Fast</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card dashboard-card">
+                        <div class="service-header">
+                            <span class="status-indicator status-active"></span>
+                            <h4>AdGuard Home</h4>
+                        </div>
+                        <p>Network-wide ad blocker a DNS server s pokročilým filtrovaním.</p>
+                        <div class="service-tags">
+                            <span class="tag">DNS</span>
+                            <span class="tag">AdBlock</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card dashboard-card">
+                        <div class="service-header">
+                            <span class="status-indicator status-active"></span>
+                            <h4>Docker</h4>
+                        </div>
+                        <p>Kontajnerová platforma pre jednoduché nasadenie rôznych aplikácií a služieb.</p>
+                        <div class="service-tags">
+                            <span class="tag">Containers</span>
+                            <span class="tag">Orchestration</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card dashboard-card">
+                        <div class="service-header">
+                            <span class="status-indicator status-active"></span>
+                            <h4>Nginx Proxy</h4>
+                        </div>
+                        <p>Reverse proxy a load balancer pre správu web služieb a SSL terminácii.</p>
+                        <div class="service-tags">
+                            <span class="tag">Proxy</span>
+                            <span class="tag">SSL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="network-diagram">
+                <h3>Sieťová Topológia</h3>
+                <div class="diagram-container dashboard-card">
+                    <div class="topology-view">
+                        <div class="topo-layer">
+                            <div class="topo-node internet">
+                                <span>Internet</span>
+                            </div>
+                        </div>
+                        <div class="topo-layer">
+                            <div class="topo-node router">
+                                <span>MikroTik hAP ac2</span>
+                                <small>Router / Firewall</small>
+                            </div>
+                        </div>
+                        <div class="topo-layer">
+                            <div class="topo-node ap">
+                                <span>Huawei AX3 Pro</span>
+                                <small>WiFi 6 AP</small>
+                            </div>
+                            <div class="topo-node server">
+                                <span>Orange Pi 5</span>
+                                <small>Services Server</small>
+                            </div>
+                        </div>
+                        <div class="topo-layer">
+                            <div class="topo-node clients">
+                                <span>Klientske zariadenia</span>
+                                <small>PC, mobile, IoT</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>System Status: <span class="status-online">Online</span></p>
+            </div>
+            <div class="footer-links">
+                <p>&copy; 2025 SysAdmin Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/responsive-loader.js"></script>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

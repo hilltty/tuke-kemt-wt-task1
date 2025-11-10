@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SysAdmin Portfolio</title>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/monitoring-theme.css">
-    <link rel="stylesheet" href="css/hobbies.css">
+    <link rel="stylesheet" href="css/global.css?v=2">
+    <link rel="stylesheet" href="css/layout.css?v=2">
+    <link rel="stylesheet" href="css/monitoring-theme.css?v=2">
+    <link rel="stylesheet" href="css/hobbies.css?v=2">
 </head>
 <body>
     <header class="main-header">
@@ -23,9 +23,9 @@
             </button>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="active">Záľuby</a></li>
+                    <li><a href="index.html" class="active">Technológie</a></li>
                     <li><a href="pages/team.html">Tím</a></li>
-                    <li><a href="pages/layout.html">Rozloženie</a></li>
+                    <li><a href="pages/homelab.html">Homelab</a></li>
                     <li><a href="pages/changes.html">Zmeny</a></li>
                 </ul>
             </nav>
@@ -34,11 +34,178 @@
 
     <main class="main-content">
         <section class="hero-section">
-            <h2>Záľuby členov tímu</h2>
-            <p class="subtitle">Naše technické projekty a hobby infraštruktúra</p>
+            <h2>Technológie a Nástroje</h2>
+            <p class="subtitle">Prehľad technológií, ktoré používame v praxi</p>
         </section>
 
-        <section class="hobbies-grid" id="hobbies-container">
+        <section class="hobbies-grid">
+            <article class="hobby-card dashboard-card">
+                <div class="card-header">
+                    <h3>Domáce Laboratórium</h3>
+                </div>
+                <div class="card-icon">
+                    <img src="assets/images/tech/homelab.jpeg" alt="Domáce Laboratórium">
+                </div>
+                <div class="card-content">
+                    <p>Virtualizačná infraštruktúra s Proxmox VE, homelab server s 64GB RAM, NAS storage a redundantné sieťové prepojenie. Experimentovanie s high-availability setupmi.</p>
+                    <div class="card-tags">
+                        <span class="tag">Proxmox</span>
+                        <span class="tag">Virtualizácia</span>
+                        <span class="tag">NAS</span>
+                        <span class="tag">Networking</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="status-badge">Aktívne</span>
+                </div>
+            </article>
+
+            <article class="hobby-card dashboard-card">
+                <div class="card-header">
+                    <h3>Orange Pi Projekty</h3>
+                </div>
+                <div class="card-icon">
+                    <img src="assets/images/tech/orangepi.jpeg" alt="Orange Pi Projekty">
+                </div>
+                <div class="card-content">
+                    <p>Single-board computer projekty: DNS server s Pi-hole, VPN gateway, domáci monitoring systém, IoT hub pre smart home zariadenia.</p>
+                    <div class="card-tags">
+                        <span class="tag">SBC</span>
+                        <span class="tag">IoT</span>
+                        <span class="tag">Pi-hole</span>
+                        <span class="tag">VPN</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="status-badge">Online</span>
+                </div>
+            </article>
+
+            <article class="hobby-card dashboard-card">
+                <div class="card-header">
+                    <h3>Kubernetes Cluster</h3>
+                </div>
+                <div class="card-icon">
+                    <img src="assets/images/tech/kubernetes.jpg" alt="Kubernetes Cluster">
+                </div>
+                <div class="card-content">
+                    <p>Multi-node K8s cluster pre experimentovanie s kontajnerovou orchestráciou. Deployment automatizácia, CI/CD pipeline, microservices architektúra.</p>
+                    <div class="card-tags">
+                        <span class="tag">K8s</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Helm</span>
+                        <span class="tag">CI/CD</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="status-badge">Running</span>
+                </div>
+            </article>
+
+            <article class="hobby-card dashboard-card">
+                <div class="card-header">
+                    <h3>Monitorovanie a Metriky</h3>
+                </div>
+                <div class="card-icon">
+                    <img src="assets/images/tech/btop.jpeg" alt="Monitorovanie a Metriky">
+                </div>
+                <div class="card-content">
+                    <p>Kompletný monitoring stack: Prometheus pre metriky, Grafana dashboardy, Loki pre logy, Alertmanager pre notifikácie. Real-time vizualizácia infraštruktúry.</p>
+                    <div class="card-tags">
+                        <span class="tag">Prometheus</span>
+                        <span class="tag">Grafana</span>
+                        <span class="tag">Loki</span>
+                        <span class="tag">Alerting</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="status-badge">Online</span>
+                </div>
+            </article>
+
+            <article class="hobby-card dashboard-card">
+                <div class="card-header">
+                    <h3>Bezpečnostné Testovanie</h3>
+                </div>
+                <div class="card-icon">
+                    <img src="assets/images/tech/trivy.jpg" alt="Bezpečnostné Testovanie">
+                </div>
+                <div class="card-content">
+                    <p>Penetračné testovanie v izolovanom prostredí, security hardening, firewall konfigurácie, vulnerability scanning s Nessus a OpenVAS.</p>
+                    <div class="card-tags">
+                        <span class="tag">Security</span>
+                        <span class="tag">Pentesting</span>
+                        <span class="tag">Hardening</span>
+                        <span class="tag">Audit</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="status-badge">Sandbox Mode</span>
+                </div>
+            </article>
+
+            <article class="hobby-card dashboard-card">
+                <div class="card-header">
+                    <h3>Automatizácia Infraštruktúry</h3>
+                </div>
+                <div class="card-icon">
+                    <img src="assets/images/tech/bash.jpg" alt="Automatizácia Infraštruktúry">
+                </div>
+                <div class="card-content">
+                    <p>Infrastructure as Code s Terraform, konfiguračný manažment pomocou Ansible, bash a Python skripty pre automatizáciu denných operácií.</p>
+                    <div class="card-tags">
+                        <span class="tag">Terraform</span>
+                        <span class="tag">Ansible</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">IaC</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="status-badge">Deployed</span>
+                </div>
+            </article>
+
+            <article class="hobby-card dashboard-card">
+                <div class="card-header">
+                    <h3>DNS a Sieťové Služby</h3>
+                </div>
+                <div class="card-icon">
+                    <img src="assets/images/tech/pihole.jpg" alt="DNS a Sieťové Služby">
+                </div>
+                <div class="card-content">
+                    <p>Vlastný DNS server s BIND9, DHCP služby, VLANs segmentácia, routing a firewall pravidlá. Experimentovanie s SDN technológiami.</p>
+                    <div class="card-tags">
+                        <span class="tag">DNS</span>
+                        <span class="tag">DHCP</span>
+                        <span class="tag">Routing</span>
+                        <span class="tag">Networking</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="status-badge">Resolving</span>
+                </div>
+            </article>
+
+            <article class="hobby-card dashboard-card">
+                <div class="card-header">
+                    <h3>Backup a Recovery</h3>
+                </div>
+                <div class="card-icon">
+                    <img src="assets/images/tech/brtfs-snaphots.jpeg" alt="Backup a Recovery">
+                </div>
+                <div class="card-content">
+                    <p>Automatizované backup riešenia s Restic a Borg, off-site replikácia, disaster recovery plány, testovanie obnovenia dát.</p>
+                    <div class="card-tags">
+                        <span class="tag">Backup</span>
+                        <span class="tag">Recovery</span>
+                        <span class="tag">Restic</span>
+                        <span class="tag">Replication</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="status-badge">Syncing</span>
+                </div>
+            </article>
         </section>
     </main>
 
@@ -57,40 +224,6 @@
     <script src="js/responsive-loader.js"></script>
     <script src="js/navigation.js"></script>
     <script>
-        async function loadHobbies() {
-            try {
-                const response = await fetch('data/hobbies.json');
-                const hobbies = await response.json();
-                const container = document.getElementById('hobbies-container');
-
-                hobbies.forEach(hobby => {
-                    const card = document.createElement('article');
-                    card.className = 'hobby-card dashboard-card';
-                    card.innerHTML = `
-                        <div class="card-header">
-                            <span class="status-indicator status-${hobby.status}"></span>
-                            <h3>${hobby.title}</h3>
-                        </div>
-                        <div class="card-icon">
-                            <div class="icon-placeholder">${hobby.icon}</div>
-                        </div>
-                        <div class="card-content">
-                            <p>${hobby.description}</p>
-                            <div class="card-tags">
-                                ${hobby.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <span class="status-badge">${hobby.statusText}</span>
-                        </div>
-                    `;
-                    container.appendChild(card);
-                });
-            } catch (error) {
-                console.error('Error loading hobbies:', error);
-            }
-        }
-
         function updateLastUpdate() {
             const now = new Date();
             const formatted = now.toLocaleString('sk-SK');
@@ -98,7 +231,6 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            loadHobbies();
             updateLastUpdate();
         });
     </script>

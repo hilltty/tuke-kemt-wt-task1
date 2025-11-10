@@ -1,0 +1,209 @@
+.homelab-overview {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.hardware-section,
+.services-section,
+.network-diagram {
+    margin-bottom: var(--spacing-xl);
+}
+
+.hardware-section h3,
+.services-section h3,
+.network-diagram h3 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--accent-primary);
+}
+
+.hardware-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.hardware-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.hardware-image {
+    width: 100%;
+    height: 200px;
+    background: var(--border-color);
+    overflow: hidden;
+}
+
+.hardware-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hardware-info {
+    padding: var(--spacing-md);
+}
+
+.hardware-info h4 {
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-primary);
+}
+
+.hardware-role {
+    color: var(--accent-secondary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+.hardware-specs {
+    list-style: none;
+}
+
+.hardware-specs li {
+    padding: 0.25rem 0;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.hardware-specs li:before {
+    content: "▸ ";
+    color: var(--accent-primary);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.service-card {
+    padding: var(--spacing-md);
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-header h4 {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.5;
+}
+
+.service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.diagram-container {
+    padding: var(--spacing-lg);
+}
+
+.topology-view {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.topo-layer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    position: relative;
+}
+
+.topo-node {
+    padding: var(--spacing-md);
+    background: var(--card-bg);
+    border: 2px solid var(--accent-primary);
+    border-radius: 8px;
+    text-align: center;
+    min-width: 200px;
+    position: relative;
+}
+
+.topo-node span {
+    display: block;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.topo-node small {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+}
+
+.topo-node.internet {
+    border-color: var(--accent-secondary);
+    background: rgba(96, 165, 250, 0.1);
+}
+
+.topo-node.router {
+    border-color: var(--accent-primary);
+    background: rgba(74, 222, 128, 0.1);
+}
+
+.topo-node.ap,
+.topo-node.server {
+    border-color: var(--accent-warning);
+    background: rgba(251, 191, 36, 0.1);
+}
+
+.topo-node.clients {
+    border-color: var(--text-secondary);
+    background: rgba(156, 163, 175, 0.1);
+}
+
+.topo-layer:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 1.5rem;
+    background: var(--border-color);
+}
+
+@media (max-width: 850px) {
+    .hardware-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topo-layer {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .topo-node {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1250px) {
+    .hardware-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

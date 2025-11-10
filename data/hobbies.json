@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Domáce Laboratórium",
     "description": "Virtualizačná infraštruktúra s Proxmox VE, homelab server s 64GB RAM, NAS storage a redundantné sieťové prepojenie. Experimentovanie s high-availability setupmi.",
-    "icon": "🖥️",
+    "icon": "homelab.jpeg",
     "status": "active",
     "statusText": "Aktívne",
     "tags": ["Proxmox", "Virtualizácia", "NAS", "Networking"]
@@ -12,7 +12,7 @@
     "id": 2,
     "title": "Orange Pi Projekty",
     "description": "Single-board computer projekty: DNS server s Pi-hole, VPN gateway, domáci monitoring systém, IoT hub pre smart home zariadenia.",
-    "icon": "🍊",
+    "icon": "orangepi.jpeg",
     "status": "active",
     "statusText": "Online",
     "tags": ["SBC", "IoT", "Pi-hole", "VPN"]
@@ -21,7 +21,7 @@
     "id": 3,
     "title": "Kubernetes Cluster",
     "description": "Multi-node K8s cluster pre experimentovanie s kontajnerovou orchestráciou. Deployment automatizácia, CI/CD pipeline, microservices architektúra.",
-    "icon": "☸️",
+    "icon": "kubernetes.jpg",
     "status": "active",
     "statusText": "Running",
     "tags": ["K8s", "Docker", "Helm", "CI/CD"]
@@ -30,7 +30,7 @@
     "id": 4,
     "title": "Monitorovanie a Metriky",
     "description": "Kompletný monitoring stack: Prometheus pre metriky, Grafana dashboardy, Loki pre logy, Alertmanager pre notifikácie. Real-time vizualizácia infraštruktúry.",
-    "icon": "📊",
+    "icon": "btop.jpeg",
     "status": "active",
     "statusText": "Online",
     "tags": ["Prometheus", "Grafana", "Loki", "Alerting"]
@@ -39,7 +39,7 @@
     "id": 5,
     "title": "Bezpečnostné Testovanie",
     "description": "Penetračné testovanie v izolovanom prostredí, security hardening, firewall konfigurácie, vulnerability scanning s Nessus a OpenVAS.",
-    "icon": "🔒",
+    "icon": "trivy.jpg",
     "status": "warning",
     "statusText": "Sandbox Mode",
     "tags": ["Security", "Pentesting", "Hardening", "Audit"]
@@ -48,7 +48,7 @@
     "id": 6,
     "title": "Automatizácia Infraštruktúry",
     "description": "Infrastructure as Code s Terraform, konfiguračný manažment pomocou Ansible, bash a Python skripty pre automatizáciu denných operácií.",
-    "icon": "⚙️",
+    "icon": "bash.jpg",
     "status": "active",
     "statusText": "Deployed",
     "tags": ["Terraform", "Ansible", "Python", "IaC"]
@@ -57,7 +57,7 @@
     "id": 7,
     "title": "DNS a Sieťové Služby",
     "description": "Vlastný DNS server s BIND9, DHCP služby, VLANs segmentácia, routing a firewall pravidlá. Experimentovanie s SDN technológiami.",
-    "icon": "🌐",
+    "icon": "pihole.jpg",
     "status": "active",
     "statusText": "Resolving",
     "tags": ["DNS", "DHCP", "Routing", "Networking"]
@@ -66,7 +66,7 @@
     "id": 8,
     "title": "Backup a Recovery",
     "description": "Automatizované backup riešenia s Restic a Borg, off-site replikácia, disaster recovery plány, testovanie obnovenia dát.",
-    "icon": "💾",
+    "icon": "brtfs-snaphots.jpeg",
     "status": "active",
     "statusText": "Syncing",
     "tags": ["Backup", "Recovery", "Restic", "Replication"]

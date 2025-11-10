@@ -32,7 +32,7 @@
         }
 
         const basePath = getBasePath();
-        linkElement.href = basePath + href;
+        linkElement.href = basePath + href + '?v=2';
     }
 
     function unloadCSS() {

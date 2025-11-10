@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tím - SysAdmin Portfolio</title>
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/monitoring-theme.css">
-    <link rel="stylesheet" href="../css/team.css">
+    <link rel="stylesheet" href="../css/global.css?v=2">
+    <link rel="stylesheet" href="../css/layout.css?v=2">
+    <link rel="stylesheet" href="../css/monitoring-theme.css?v=2">
+    <link rel="stylesheet" href="../css/team.css?v=2">
 </head>
 <body>
     <header class="main-header">
@@ -23,9 +23,9 @@
             </button>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../index.html">Záľuby</a></li>
+                    <li><a href="../index.html">Technológie</a></li>
                     <li><a href="team.html" class="active">Tím</a></li>
-                    <li><a href="layout.html">Rozloženie</a></li>
+                    <li><a href="homelab.html">Homelab</a></li>
                     <li><a href="changes.html">Zmeny</a></li>
                 </ul>
             </nav>
@@ -38,7 +38,91 @@
             <p class="subtitle">Stretni ľudí za projektom</p>
         </section>
 
-        <section class="team-grid" id="team-container">
+        <section class="team-grid">
+            <article class="team-card dashboard-card">
+                <div class="team-photo">
+                    <img src="../assets/images/team/dmytro.jpg" alt="Dmytro Loiko">
+                </div>
+                <div class="team-info">
+                    <h3>Dmytro Loiko</h3>
+                    <p class="team-role">System Administrator</p>
+                    <p class="team-description">Spravuje servery, siete a zabezpečenie systémov. Skúsenosti s Linux, networking a monitoring nástrojmi.</p>
+                    <div class="team-skills">
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Networking</span>
+                        <span class="skill-tag">Security</span>
+                        <span class="skill-tag">Monitoring</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="team-card dashboard-card">
+                <div class="team-photo">
+                    <img src="../assets/images/team/vladyslav.jpg" alt="Vladyslav Deinerovych">
+                </div>
+                <div class="team-info">
+                    <h3>Vladyslav Deinerovych</h3>
+                    <p class="team-role">Frontend Developer</p>
+                    <p class="team-description">Vytvára responzívne používateľské rozhrania. Pracuje s moderným JavaScript, HTML5 a CSS3.</p>
+                    <div class="team-skills">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">React</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="team-card dashboard-card">
+                <div class="team-photo">
+                    <img src="../assets/images/team/pavlo.jpg" alt="Pavlo Umanskyi">
+                </div>
+                <div class="team-info">
+                    <h3>Pavlo Umanskyi</h3>
+                    <p class="team-role">DevOps Engineer</p>
+                    <p class="team-description">Stará sa o infraštruktúru, CI/CD pipeline a automatizáciu. Expert na Kubernetes a cloud technológie.</p>
+                    <div class="team-skills">
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Terraform</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="team-card dashboard-card">
+                <div class="team-photo">
+                    <img src="../assets/images/team/anton.jpg" alt="Anton Kozar">
+                </div>
+                <div class="team-info">
+                    <h3>Anton Kozar</h3>
+                    <p class="team-role">Backend Developer</p>
+                    <p class="team-description">Špecializuje sa na serverové technológie, databázy a API dizajn. Má skúsenosti s Python, Node.js a PostgreSQL.</p>
+                    <div class="team-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="team-card dashboard-card">
+                <div class="team-photo">
+                    <img src="../assets/images/team/denys.jpg" alt="Denys Semych">
+                </div>
+                <div class="team-info">
+                    <h3>Denys Semych</h3>
+                    <p class="team-role">Full Stack Developer</p>
+                    <p class="team-description">Kombinuje frontend a backend zručnosti. Pracuje na komplexných webových aplikáciách od začiatku do konca.</p>
+                    <div class="team-skills">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
 
@@ -56,37 +140,5 @@
 
     <script src="../js/responsive-loader.js"></script>
     <script src="../js/navigation.js"></script>
-    <script>
-        async function loadTeam() {
-            try {
-                const response = await fetch('../data/team.json');
-                const team = await response.json();
-                const container = document.getElementById('team-container');
-
-                team.forEach(member => {
-                    const card = document.createElement('article');
-                    card.className = 'team-card dashboard-card';
-                    card.innerHTML = `
-                        <div class="team-photo">
-                            <img src="../${member.photo}" alt="${member.name}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect width=%22200%22 height=%22200%22 fill=%22%23374151%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2260%22 fill=%22%234ade80%22%3E${member.name.split(' ').map(n => n[0]).join('')}%3C/text%3E%3C/svg%3E'">
-                        </div>
-                        <div class="team-info">
-                            <h3>${member.name}</h3>
-                            <p class="team-role">${member.role}</p>
-                            <p class="team-description">${member.description}</p>
-                            <div class="team-skills">
-                                ${member.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
-                            </div>
-                        </div>
-                    `;
-                    container.appendChild(card);
-                });
-            } catch (error) {
-                console.error('Error loading team:', error);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', loadTeam);
-    </script>
 </body>
 </html>
