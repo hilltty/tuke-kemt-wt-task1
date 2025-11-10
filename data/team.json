@@ -36,7 +36,7 @@
     "name": "Denys Semych",
     "role": "Full Stack Developer",
     "description": "Kombinuje frontend a backend zručnosti. Pracuje na komplexných webových aplikáciách od začiatku do konca.",
-    "photo": "assets/images/team/denys.svg",
+    "photo": "assets/images/team/denys.jpg",
     "skills": ["JavaScript", "Python", "SQL", "Git"]
   }
 ]
