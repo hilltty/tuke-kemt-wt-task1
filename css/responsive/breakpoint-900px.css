@@ -1,0 +1,31 @@
+body {
+    background: #1a1d2e;
+}
+
+.dashboard-card {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transform: translateZ(0);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+    transition: width 0.5s ease;
+}
+
+.main-header {
+    border-radius: 0;
+}
+
+.control-btn:hover {
+    transform: scale(1.05);
+}
+
+.change-card {
+    transition: all 0.3s ease;
+    transform: translateZ(0);
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tím - SysAdmin Portfolio</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/monitoring-theme.css">
+    <link rel="stylesheet" href="../css/team.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="status-indicator"></span>
+                <h1>SysAdmin Portfolio</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Záľuby</a></li>
+                    <li><a href="team.html" class="active">Tím</a></li>
+                    <li><a href="layout.html">Rozloženie</a></li>
+                    <li><a href="changes.html">Zmeny</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <h2>Náš Tím</h2>
+            <p class="subtitle">Stretni ľudí za projektom</p>
+        </section>
+
+        <section class="team-grid" id="team-container">
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>System Status: <span class="status-online">Online</span></p>
+                <p>Team Size: <span id="team-size">5</span></p>
+            </div>
+            <div class="footer-links">
+                <p>&copy; 2025 SysAdmin Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/responsive-loader.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script>
+        async function loadTeam() {
+            try {
+                const response = await fetch('../data/team.json');
+                const team = await response.json();
+                const container = document.getElementById('team-container');
+
+                team.forEach(member => {
+                    const card = document.createElement('article');
+                    card.className = 'team-card dashboard-card';
+                    card.innerHTML = `
+                        <div class="team-photo">
+                            <img src="../${member.photo}" alt="${member.name}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect width=%22200%22 height=%22200%22 fill=%22%23374151%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2260%22 fill=%22%234ade80%22%3E${member.name.split(' ').map(n => n[0]).join('')}%3C/text%3E%3C/svg%3E'">
+                        </div>
+                        <div class="team-info">
+                            <h3>${member.name}</h3>
+                            <p class="team-role">${member.role}</p>
+                            <p class="team-description">${member.description}</p>
+                            <div class="team-skills">
+                                ${member.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error loading team:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadTeam);
+    </script>
+</body>
+</html>

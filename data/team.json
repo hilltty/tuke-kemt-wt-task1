@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Dmytro Loiko",
+    "role": "System Administrator",
+    "description": "Spravuje servery, siete a zabezpečenie systémov. Skúsenosti s Linux, networking a monitoring nástrojmi.",
+    "photo": "assets/images/team/dmytro.jpg",
+    "skills": ["Linux", "Networking", "Security", "Monitoring"]
+  },
+  {
+    "id": 2,
+    "name": "Vladyslav Deinerovych",
+    "role": "Frontend Developer",
+    "description": "Vytvára responzívne používateľské rozhrania. Pracuje s moderným JavaScript, HTML5 a CSS3.",
+    "photo": "assets/images/team/vladyslav.jpg",
+    "skills": ["JavaScript", "HTML5", "CSS3", "React"]
+  },
+  {
+    "id": 3,
+    "name": "Pavlo Umanskyi",
+    "role": "DevOps Engineer",
+    "description": "Stará sa o infraštruktúru, CI/CD pipeline a automatizáciu. Expert na Kubernetes a cloud technológie.",
+    "photo": "assets/images/team/pavlo.jpg",
+    "skills": ["Kubernetes", "Docker", "AWS", "Terraform"]
+  },
+  {
+    "id": 4,
+    "name": "Anton Kozar",
+    "role": "Backend Developer",
+    "description": "Špecializuje sa na serverové technológie, databázy a API dizajn. Má skúsenosti s Python, Node.js a PostgreSQL.",
+    "photo": "assets/images/team/anton.jpg",
+    "skills": ["Python", "Node.js", "PostgreSQL", "Docker"]
+  },
+  {
+    "id": 5,
+    "name": "Denys Semych",
+    "role": "Full Stack Developer",
+    "description": "Kombinuje frontend a backend zručnosti. Pracuje na komplexných webových aplikáciách od začiatku do konca.",
+    "photo": "assets/images/team/denys.svg",
+    "skills": ["JavaScript", "Python", "SQL", "Git"]
+  }
+]

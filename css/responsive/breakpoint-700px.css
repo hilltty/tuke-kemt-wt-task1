@@ -1,0 +1,30 @@
+body {
+    background: #1a1d2e;
+}
+
+.dashboard-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transform: translateZ(0);
+}
+
+.hero-section {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-2px);
+}
+
+.control-btn {
+    transition: transform 0.3s ease;
+}
+
+.main-nav a {
+    transition: all 0.3s ease;
+}
+
+.tag {
+    transition: all 0.3s ease;
+}

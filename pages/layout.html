@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozloženie - SysAdmin Portfolio</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/monitoring-theme.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="status-indicator"></span>
+                <h1>SysAdmin Portfolio</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Záľuby</a></li>
+                    <li><a href="team.html">Tím</a></li>
+                    <li><a href="layout.html" class="active">Rozloženie</a></li>
+                    <li><a href="changes.html">Zmeny</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="layout-demo">
+        <aside class="sidebar dashboard-card">
+            <h3>System Info</h3>
+            <div class="info-block">
+                <p class="info-label">CPU Usage</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 45%"></div>
+                </div>
+                <p class="info-value">45%</p>
+            </div>
+            <div class="info-block">
+                <p class="info-label">Memory</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 62%"></div>
+                </div>
+                <p class="info-value">62%</p>
+            </div>
+            <div class="info-block">
+                <p class="info-label">Disk</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 78%"></div>
+                </div>
+                <p class="info-value">78%</p>
+            </div>
+            <div class="info-block">
+                <p class="info-label">Network</p>
+                <div class="status-list">
+                    <span class="status-indicator status-active"></span>
+                    <span>eth0: Active</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="content-header">
+                <h2>Flexbox a Grid Rozloženie</h2>
+                <p>Adaptívna štruktúra s tromi hlavnými oblasťami</p>
+            </section>
+
+            <section class="grid-demo">
+                <div class="grid-container">
+                    <div class="grid-item grid-header dashboard-card">
+                        <h3>Header Area</h3>
+                        <p>Flexbox: justify-content space-between</p>
+                    </div>
+                    <div class="grid-item grid-main dashboard-card">
+                        <h3>Main Content Area</h3>
+                        <p>CSS Grid s grid-template-areas</p>
+                        <div class="content-blocks">
+                            <div class="content-block">
+                                <h4>Block 1</h4>
+                                <p>Pri menších obrazovkách sa bloky zoskupia vertikálne</p>
+                            </div>
+                            <div class="content-block">
+                                <h4>Block 2</h4>
+                                <p>Pri väčších obrazovkách sa zobrazia vedľa seba</p>
+                            </div>
+                            <div class="content-block">
+                                <h4>Block 3</h4>
+                                <p>Adaptívne rozloženie pomocou media queries</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item grid-sidebar dashboard-card">
+                        <h3>Sidebar</h3>
+                        <p>Na mobiloch sa posúva do footera</p>
+                        <ul class="sidebar-links">
+                            <li><span class="status-indicator status-active"></span> Services: Running</li>
+                            <li><span class="status-indicator status-active"></span> Database: Online</li>
+                            <li><span class="status-indicator status-warning"></span> Backup: Pending</li>
+                        </ul>
+                    </div>
+                    <div class="grid-item grid-footer dashboard-card">
+                        <h3>Footer Area</h3>
+                        <p>Flexbox row, wrap na mobilných zariadeniach</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>System Status: <span class="status-online">Online</span></p>
+            </div>
+            <div class="footer-links">
+                <p>&copy; 2025 SysAdmin Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/responsive-loader.js"></script>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "category": "Enhancement",
+    "title": "Responzívna mriežka pre karty",
+    "description": "Hobby karty sa teraz automaticky prispôsobujú šírke obrazovky. Na mobile jeden stĺpec, na tablete dva, na desktope tri až štyri.",
+    "uxDecision": "Grid automaticky upraví počet stĺpcov podľa dostupného priestoru, takže karty vždy vyzerajú dobre.",
+    "benefit": "Stránka funguje na všetkých zariadeniach bez potreby horizontálneho posúvania.",
+    "accessibility": "Logické poradie obsahu je zachované pre všetkých používateľov.",
+    "date": "2025-11-10"
+  },
+  {
+    "id": 2,
+    "category": "UX",
+    "title": "Tmavá farebná schéma",
+    "description": "Použili sme tmavé pozadie s jemnými akcent farbami pre príjemnejšie prezeranie.",
+    "uxDecision": "Tmavé pozadie je menej únavné pre oči a hodí sa k technickej téme.",
+    "benefit": "Stránku môžete pohodlne prezerať aj dlhšie bez únavy očí.",
+    "accessibility": "Dobrý kontrast textu a pozadia pre lepšiu čitateľnosť.",
+    "date": "2025-11-08"
+  },
+  {
+    "id": 3,
+    "category": "Accessibility",
+    "title": "Ovládanie veľkosti textu",
+    "description": "Pridali sme možnosť zväčšiť alebo zmenšiť text pomocou tlačidla, klávesovej skratky alebo dropdown menu.",
+    "uxDecision": "Každý si môže prispôsobiť veľkosť textu podľa svojich potrieb.",
+    "benefit": "Lepšia čitateľnosť pre používateľov so slabším zrakom.",
+    "accessibility": "Text je možné zväčšiť bez myši, len klávesnicou (Ctrl+E).",
+    "date": "2025-11-06"
+  },
+  {
+    "id": 4,
+    "category": "Enhancement",
+    "title": "Optimalizované načítanie štýlov",
+    "description": "Rôzne CSS súbory sa načítavajú automaticky podľa veľkosti okna.",
+    "uxDecision": "Načítavame len tie štýly, ktoré sú potrebné pre aktuálnu veľkosť obrazovky.",
+    "benefit": "Stránka sa načíta rýchlejšie, najmä na mobilných zariadeniach.",
+    "accessibility": "Responzívne zmeny fungujú na všetkých zariadeniach.",
+    "date": "2025-11-04"
+  },
+  {
+    "id": 5,
+    "category": "UX",
+    "title": "Interaktívne hover efekty",
+    "description": "Karty reagujú na prechod myšou jemným pohybom a zvýraznením.",
+    "uxDecision": "Vizuálna spätná väzba ukazuje, že prvky sú klikateľné.",
+    "benefit": "Používateľ intuitívne vie, čo je interaktívne.",
+    "accessibility": "Efekty fungujú aj cez klávesnicu pre používateľov bez myši.",
+    "date": "2025-11-02"
+  },
+  {
+    "id": 6,
+    "category": "Enhancement",
+    "title": "Flexibilné rozloženie stránky",
+    "description": "Kombinácia Flexbox a CSS Grid pre optimálne rozloženie obsahu.",
+    "uxDecision": "Každá technológia sa používa tam, kde funguje najlepšie.",
+    "benefit": "Stránka má flexibilné rozloženie s minimálnym množstvom kódu.",
+    "accessibility": "Štruktúra stránky je logická pre všetkých používateľov.",
+    "date": "2025-10-31"
+  },
+  {
+    "id": 7,
+    "category": "UX",
+    "title": "Hamburger menu na mobile",
+    "description": "Na mobilných zariadeniach je navigácia skrytá v hamburger menu.",
+    "uxDecision": "Šetrí miesto na obrazovke pre dôležitejší obsah.",
+    "benefit": "Viac priestoru pre obsah, prehľadná navigácia.",
+    "accessibility": "Menu je možné otvoriť a ovládať klávesnicou.",
+    "date": "2025-10-29"
+  },
+  {
+    "id": 8,
+    "category": "Accessibility",
+    "title": "Semantic HTML a ARIA",
+    "description": "Použili sme správne HTML tagy a ARIA atribúty pre lepšiu prístupnosť.",
+    "uxDecision": "Pomáha to čítačkám obrazovky správne interpretovať obsah.",
+    "benefit": "Stránka je prístupná aj pre používateľov so zrakovým postihnutím.",
+    "accessibility": "Správna štruktúra nadpisov, ARIA labels na interaktívnych prvkoch.",
+    "date": "2025-10-27"
+  }
+]

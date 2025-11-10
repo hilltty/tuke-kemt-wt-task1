@@ -1,0 +1,42 @@
+body {
+    background: #1a1d2e;
+}
+
+.dashboard-card {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    transform: translateZ(0);
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(74, 222, 128, 0.2);
+}
+
+.hero-section {
+    border-radius: 8px;
+    transform: translateZ(0);
+}
+
+.grid-container {
+    gap: calc(var(--spacing-xl) * 1.5);
+    transform: translateZ(0);
+}
+
+.control-btn {
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+    transform: scale(1.05);
+}
+
+.progress-fill {
+    background: linear-gradient(90deg,
+        var(--accent-primary) 0%,
+        var(--accent-secondary) 100%);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}

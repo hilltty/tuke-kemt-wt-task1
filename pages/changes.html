@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zmeny - SysAdmin Portfolio</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/monitoring-theme.css">
+    <link rel="stylesheet" href="../css/changes.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="status-indicator"></span>
+                <h1>SysAdmin Portfolio</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Záľuby</a></li>
+                    <li><a href="team.html">Tím</a></li>
+                    <li><a href="layout.html">Rozloženie</a></li>
+                    <li><a href="changes.html" class="active">Zmeny</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="changes-header">
+            <h2>Zmeny a Vylepšenia Projektu</h2>
+            <div class="size-controls">
+                <label for="size-select">Veľkosť obsahu:</label>
+                <select id="size-select">
+                    <option value="small">Malá</option>
+                    <option value="medium" selected>Stredná</option>
+                    <option value="large">Veľká</option>
+                </select>
+                <button id="enlarge-btn" class="control-btn">Zväčšiť</button>
+                <span class="keyboard-hint">Klávesová skratka: Ctrl+E</span>
+            </div>
+        </section>
+
+        <section class="sekcia_zmena" id="sekcia_zmena">
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>System Status: <span class="status-online">Online</span></p>
+            </div>
+            <div class="footer-links">
+                <p>&copy; 2025 SysAdmin Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/responsive-loader.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/ui.js"></script>
+    <script>
+        async function loadChanges() {
+            try {
+                const response = await fetch('../data/changes.json');
+                const changes = await response.json();
+                const container = document.getElementById('sekcia_zmena');
+
+                changes.forEach(change => {
+                    const card = document.createElement('article');
+                    card.className = 'change-card dashboard-card';
+                    card.innerHTML = `
+                        <div class="change-header">
+                            <span class="change-category category-${change.category.toLowerCase()}">${change.category}</span>
+                            <h3>${change.title}</h3>
+                        </div>
+                        <div class="change-content">
+                            <p><strong>Popis zmeny:</strong> ${change.description}</p>
+                            <p><strong>UX/UI rozhodnutie:</strong> ${change.uxDecision}</p>
+                            <p><strong>Prínos:</strong> ${change.benefit}</p>
+                            ${change.accessibility ? `<p><strong>Prístupnosť:</strong> ${change.accessibility}</p>` : ''}
+                        </div>
+                        <div class="change-footer">
+                            <span class="change-date">${change.date}</span>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error loading changes:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadChanges();
+        });
+    </script>
+</body>
+</html>
